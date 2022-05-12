@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+        
+        html{
+            height: 100%;
+        }
+        body{
+            text-align: center;
+            background: linear-gradient(to right, rgba(20, 19, 19, 0.49), rgba(0, 0, 0, 0.84)), url(https://www.avanade.com/en/blogs/avanade-insights/security/email-phishing/~/media/images/blogs/avanade-insights/email-phishing.jpg);
+            background-repeat: no-repeat;
+            opacity: ;
+            color: aliceblue;
+            font-family: 'Baloo Tamma 2', cursive;
+        }
+        .cover{
+            background: ;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 25%;
+            margin-left: 25%;
+            margin-top: 2%
+        }
+        .out{
+            background: ;
+            width: 80%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            margin-left: 10%;
+            margin-top: 22%
+        }
+    </style>  
+  </head>
+  <body>
+   
+  <div class="cover">
+
+        <h1 class="cover-heading" >Predict legitimacy of websites</h1>
+        <div id="loading" style="height:50px">
+        <img   src="/static/red.gif" height="50" width="50" alt="Loading..." /><p>Please wait this can take a while</p>
+        </div> <br>
+        <form action ='/predict' method='post'>
+	       <input class="form-control" type = 'text' name = 'url' placeholder="URL">
+            <br>
+	       <input class="btn btn-primary" type="submit" value="predict">
+        </form> 
+    </div>
+   <br>
+     <strong><p style="background:; text-decoration: underline; letter-spacing: 3px; word-spacing: 3px; width: 40%; font-size: 27px; position: absolute; top: 0; left: 0; margin-top: 16%; margin-left: 30% "> {% if label %} {{ label }} {% endif %} </p></strong>
+     
+     <div class="out">
+         <h2>About <br><p style="position: absolute; left: 0;margin-left: 3%"> What Is Phishing?</p></h2>
+        <p class="lead" style="position: absolute; top: 0; margin-top: 7%; font-size: 25px">
+            Phishing is a cybercrime in which a target or targets are contacted by email, telephone or text message by someone posing as a legitimate institution to lure individuals into providing sensitive data such as personally identifiable information, banking and credit card details, and passwords.<br>
+            Detection of phishing websites is a really important safety measure for most of the online platforms. So, as to save a platform with malicious requests from such websites, it is important to have a robust phishing detection system in place.
+        </p>
+        <p class="lead" style="position: absolute; top: 0; margin-top: 25%; font-size: 25px">
+            PhishCoop is an intelligent, flexible and effective system that uses UCI datasets and supervised machine learning algorithms to classify legitimacy of websites. The main objective of this system is to distinguish the phishing websites from the legitimate websites and ensure secure transactions to users.
+        </p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.12.4.min.js"><\/script>')</script>
+    <script language="javascript" type="text/javascript">
+     $(window).load(function() {
+     $('#loading').hide();
+     });
+        
+     $(".btn").click(function () {
+     $("#loading").show();
+     });
+    </script>  
+  </body>
+</html>
